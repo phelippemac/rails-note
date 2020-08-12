@@ -32,3 +32,37 @@ Temo o intuito de gravar dados de Clientes e seus Contatos, e ainda contar com u
 
 - [simple-form](https://github.com/heartcombo/simple_form)
 - [devise](https://github.com/heartcombo/devise)
+
+## Instalação
+
+Comece clonando este repositório e entrando no diretório criado.
+
+```bash
+$ git clone https://github.com/phelippemac/rails-note.git
+$ cd rails-note
+```
+
+Abra com seu editor de texto favorito e crie um arquivo em *./config* chamado *local_env.yml* com o seguinte conteúdo:
+
+```ruby
+SAMPLE_APP_DATABASE_USER: 'USUÁRIO DO POSTGRES'
+SAMPLE_APP_DATABASE_PASSWORD: 'SENHRA DO USUÀRIO'
+```
+*OBS: Este arquivo deve conter o usuário e senhra do postgres, para que passa criar e rodar as migrations.*
+
+Rode então o seguinte comando:
+
+```bash
+$ rails db:create db:migrate
+```
+Posterior a isso, está quase pronto, basta rodar:
+
+```bash
+$ rails server
+```
+ou
+```bash
+$ rails s
+```
+
+E acessar a aplicação no endereço: *localhost:3000*
