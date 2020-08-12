@@ -1,24 +1,34 @@
-# README
+<h1 align="center">
+  <img src="https://ik.imagekit.io/795unnjv9m/Meu_portifolio_-_Padr_o_yEh6G0CIc.png">
+</h1>
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+<h3 align="center">
+  <img src="https://ik.imagekit.io/795unnjv9m/RailsNote_oQ1lUNk5I.png?" height="180">
+</h3>
 
-Things you may want to cover:
+## Galeria
 
-* Ruby version
+Ainda Vazia 😒
 
-* System dependencies
+## Sobre
 
-* Configuration
+É um projeto realizado como um prova prática de conhecimentos a nível junior de desenvolvimento WEB.
+Temo o intuito de gravar dados de Clientes e seus Contatos, e ainda contar com um sistema de Login.
 
-* Database creation
+## Prototipação do Banco de Dados
 
-* Database initialization
+<h1 align="center">
+  <img src="https://ik.imagekit.io/795unnjv9m/full-stack-vaga_KRGqZLIKl_.png">
 
-* How to run the test suite
 
-* Services (job queues, cache servers, search engines, etc.)
+## Ferramentas Utilizadas
 
-* Deployment instructions
+- Rails - 6.0.3.2
+- Ruby - 2.7.1p83
+- PostgreSql
+- Bootstrap 4
 
-* ...
+## GEMs
+
+- [simple-form](https://github.com/heartcombo/simple_form)
+- [devise](https://github.com/heartcombo/devise)
