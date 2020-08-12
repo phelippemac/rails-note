@@ -35,7 +35,8 @@ gem 'simple_form'
 - [devise](https://github.com/heartcombo/devise) - Devise is a flexible authentication solution for Rails based on Warden
 - [font-awesome-rails](https://github.com/bokmann/font-awesome-rails) - provides the Font-Awesome web fonts and stylesheets as a Rails engine for use with the asset pipeline.
 gem "font-awesome-rails"
-
+- [kaminari](https://github.com/kaminari/kaminari) - A Scope & Engine based, clean, powerful, customizable and sophisticated paginator for modern web app frameworks and ORMs
+- [rails-i18n](https://github.com/svenfuchs/rails-i18n) - Centralization of locale data collection for Ruby on Rails.
 ## Instalação
 
 Comece clonando este repositório e entrando no diretório criado.
@@ -51,7 +52,7 @@ Abra com seu editor de texto favorito e crie um arquivo em *./config* chamado *l
 SAMPLE_APP_DATABASE_USER: '[USUÁRIO DO POSTGRES]'
 SAMPLE_APP_DATABASE_PASSWORD: '[SENHA DO USUÀRIO]'
 ```
-*OBS: Este arquivo deve conter o usuário e senhra do postgres, para que passa criar e rodar as migrations.*
+*OBS: Este arquivo deve conter o usuário e senha do postgres, para que passa criar e rodar as migrations.*
 
 Rode então o seguinte comando no terminal:
 
