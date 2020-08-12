@@ -45,12 +45,12 @@ $ cd rails-note
 Abra com seu editor de texto favorito e crie um arquivo em *./config* chamado *local_env.yml* com o seguinte conteúdo:
 
 ```ruby
-SAMPLE_APP_DATABASE_USER: 'USUÁRIO DO POSTGRES'
-SAMPLE_APP_DATABASE_PASSWORD: 'SENHRA DO USUÀRIO'
+SAMPLE_APP_DATABASE_USER: '[USUÁRIO DO POSTGRES]'
+SAMPLE_APP_DATABASE_PASSWORD: '[SENHRA DO USUÀRIO]'
 ```
 *OBS: Este arquivo deve conter o usuário e senhra do postgres, para que passa criar e rodar as migrations.*
 
-Rode então o seguinte comando:
+Rode então o seguinte comando no terminal:
 
 ```bash
 $ rails db:create db:migrate
