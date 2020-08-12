@@ -9,8 +9,12 @@
                 <p class="lead">Jumbo helper text</p>
                 <hr class="my-2">
                 <p class="lead">
-                    <%= link_to  "Clientes", '', class: 'btn btn-02 btn-lg' %>
-                    <%= link_to  "Contatos", '', class: 'btn btn-02 btn-lg' %>
+                    <%= link_to customers_path, {class: 'btn btn-02 btn-lg'}  do %>
+                    <i class="fa fa-user"></i> Clientes
+                    <% end %>
+                    <%= link_to contacts_path, {class: 'btn btn-02 btn-lg'}  do %>
+                    <i class="fa fa-user"></i> Contatos
+                    <% end %>
                 </p>
             </div>
         </div>

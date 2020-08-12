@@ -8,7 +8,7 @@
 
 ## Galeria
 
-Ainda Vazia 😒
+Ainda Vazia 😒 # O projeto encontra-se em fase de contrução das Views
 
 ## Sobre
 
@@ -30,8 +30,11 @@ Temo o intuito de gravar dados de Clientes e seus Contatos, e ainda contar com u
 
 ## GEMs
 
-- [simple-form](https://github.com/heartcombo/simple_form)
-- [devise](https://github.com/heartcombo/devise)
+- [simple-form](https://github.com/heartcombo/simple_form) - The basic goal of Simple Form is to not touch your way of defining the layout, letting you find the better design for your eyes
+gem 'simple_form'
+- [devise](https://github.com/heartcombo/devise) - Devise is a flexible authentication solution for Rails based on Warden
+- [font-awesome-rails](https://github.com/bokmann/font-awesome-rails) - provides the Font-Awesome web fonts and stylesheets as a Rails engine for use with the asset pipeline.
+gem "font-awesome-rails"
 
 ## Instalação
 
@@ -44,9 +47,9 @@ $ cd rails-note
 
 Abra com seu editor de texto favorito e crie um arquivo em *./config* chamado *local_env.yml* com o seguinte conteúdo:
 
-```ruby
+```yml
 SAMPLE_APP_DATABASE_USER: '[USUÁRIO DO POSTGRES]'
-SAMPLE_APP_DATABASE_PASSWORD: '[SENHRA DO USUÀRIO]'
+SAMPLE_APP_DATABASE_PASSWORD: '[SENHA DO USUÀRIO]'
 ```
 *OBS: Este arquivo deve conter o usuário e senhra do postgres, para que passa criar e rodar as migrations.*
 
@@ -66,3 +69,20 @@ $ rails s
 ```
 
 E acessar a aplicação no endereço: *localhost:3000*
+
+## Opcional 
+
+ Você pode popular o banco de dados com os seguintes comandos no terminal:
+
+ - Criar 50 clientes com informações aleatórias:
+
+```bash
+$ rails populate:customer
+```
+
+- Criar de 1 a 3 contatos para cada cliente existente de forma também aleatória.
+```bash
+$ rails populate:contact
+```
+*Obs: O 'populate:contact' só pode ser rodado depois que houver algum Cliente cadastrado*
+

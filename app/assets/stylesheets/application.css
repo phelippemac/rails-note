@@ -11,6 +11,7 @@
  * It is generally better to create a new file per style scope.
  *
  *= require bootstrap
+ *= require font-awesome
  *= require_tree .
  *= require_self
  */
@@ -33,6 +34,7 @@
 }
 
 html, body, #root {
+    width: 100vw;
     height: 100vh;
 }
 
@@ -44,4 +46,58 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.page-header{
+  display: flex;
+  flex-direction: column;
+  background-color: var(--color-dark-01);
+  border-block-color: var(--color-dark-02);
+
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--color-white);
+  padding: 0.2rem 0;
+}
+
+.display-3 {
+    font-family: 'Open Sans Condensed', sans-serif;
+}
+
+.logo-image{
+    
+    max-width: 128px;
+    width: 12.2rem;
+}
+
+@media (min-width: 700px){
+  .page-header{
+    display: inline-block;
+    flex-direction: row;
+    background-color: var(--color-dark-01);
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--color-white);
+    max-height: 15vh;
+  }
+
+  .logo-image{
+    margin-left: 2rem;
+    max-width: 92px;
+    width: 12.2rem;
+  }
+
+  .home-image{
+    width: 100vw;
+    opacity: 30%;
+    flex: 1;
+    background-size: ccover;
+    max-height: 85vh;
+  }
+
 }

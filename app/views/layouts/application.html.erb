@@ -10,11 +10,15 @@
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
 
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&family=PT+Sans+Narrow&display=swap" rel="stylesheet">
+
 </head>
 
 <body>
     <header class="page-header">
-        <%= image_tag  "RailsNote.png", class: 'logo-image' %>
+        <%= link_to  home_index_path do %>
+            <%= image_tag  "RailsNote.png", class: 'logo-image' %>
+        <% end %>
     </header>
     <%= yield %>
 </body>
