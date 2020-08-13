@@ -14,6 +14,7 @@
                 <th>E-mail</th>
                 <th>Telefone</th>
                 <th colspan=" 3">
+                <%= link_to "Relatórios", customers_download_path(@customers, format: 'pdf'), method: :post, class: 'btn btn-warning btn-lg', style: 'width: 20rem' %>
                 </th>
             </tr>
         </thead>
@@ -26,7 +27,7 @@
                 <td><%= customer.phone %></td>
                 <td><%= link_to 'Mostrar', customer, class: 'btn btn-primary' %></td>
                 <td><%= link_to 'Editar', edit_customer_path(customer), class: 'btn btn-warning' %></td>
-                <td><%= link_to 'Deletar', customer, method: :delete, class: 'btn btn-danger' ,data: { confirm: 'Are you sure?' } %></td>
+                <td><%= link_to 'Deletar', customer, method: :delete, class: 'btn btn-danger' ,data: { confirm: 'Tem Certeza?' } %></td>
             </tr>
             <% end %>
         </tbody>

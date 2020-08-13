@@ -37,6 +37,8 @@ gem 'simple_form'
 gem "font-awesome-rails"
 - [kaminari](https://github.com/kaminari/kaminari) - A Scope & Engine based, clean, powerful, customizable and sophisticated paginator for modern web app frameworks and ORMs
 - [rails-i18n](https://github.com/svenfuchs/rails-i18n) - Centralization of locale data collection for Ruby on Rails.
+- [prawn](https://github.com/prawnpdf/prawn) - Prawn: Fast, Nimble PDF Generation For Ruby
+
 ## Instalação
 
 Comece clonando este repositório e entrando no diretório criado.

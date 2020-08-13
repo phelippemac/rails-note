@@ -1,24 +1,18 @@
 <p id="notice"><%= notice %></p>
-
-<p>
-  <strong>Name:</strong>
-  <%= @contact.name %>
-</p>
-
-<p>
-  <strong>Email:</strong>
-  <%= @contact.email %>
-</p>
-
-<p>
-  <strong>Phone:</strong>
-  <%= @contact.phone %>
-</p>
-
-<p>
-  <strong>Customer:</strong>
-  <%= @contact.customer_id %>
-</p>
-
-<%= link_to 'Edit', edit_contact_path(@contact) %> |
-<%= link_to 'Back', contacts_path %>
+<h1>Contato:</h1>
+<div class="card col-lg-6 col-sm-12 font-change">
+    <div class="card-header">
+        <h1><strong>Nome: </strong><%= @contact.name %> - <strong>Email: </strong> <%= @contact.email %> - <strong>Telefone: </strong><%= @contact.phone %></h1>
+    </div>
+    <div class="card-body">
+        <h2>Este contato esta presente na lista de:</h2>
+        <hr>
+        <%= link_to @contact.customer do %>
+          <h3><%= @contact.customer.name %></h3>
+        <% end %>
+    </div>
+    <div class="card-footer">
+        <%= link_to 'Editar',edit_contact_path(@contact), class: 'btn btn-warning btn-lg' %>
+        <%= link_to 'Voltar', contacts_path, class: 'btn btn-secondary btn-lg' %>
+    </div>
+</div>

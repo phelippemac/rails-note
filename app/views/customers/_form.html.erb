@@ -1,15 +1,30 @@
 
+<div class="card card-primary col-sm-12 col-lg-3 font-change">
 <%= simple_form_for(@customer) do |f| %>
-  <%= f.error_notification %>
+  <div class="card-header">
+    <h1><%= phrase %> <i class="fa fa-pencil" aria-hidden="true"></i></h1>  
+    <%= f.error_notification %>
   <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
-
-  <div class="form-inputs">
-    <%= f.input :name %>
-    <%= f.input :email %>
-    <%= f.input :phone %>
   </div>
-
-  <div class="form-actions">
-    <%= f.button :submit %>
+  
+  <div class="card-body">
+      <div class="form-inputs">
+        <%= f.input :name %>
+        <%= f.input :email %>
+        <%= f.input :phone %>
+      </div>
   </div>
-<% end %>
+  
+  <div class="card-footer">
+    <div class="form-actions">
+      <%= f.button :submit, class: 'btn btn-success btn-lg' %>
+      <% if show %>
+        <%= link_to "Mostrar", @customer,  class: 'btn btn-warning btn-lg' %>
+      <% end %>
+      <% if back %>
+        <%= link_to "Voltar", customers_path,  class: 'btn btn-secondary btn-lg' %>
+      <% end%>
+    </div>
+  </div>
+  <% end %>
+</div>

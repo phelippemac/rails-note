@@ -1,5 +1,6 @@
 class CustomersController < ApplicationController
   before_action :set_customer, only: [:show, :edit, :update, :destroy]
+  before_action :set_customers, onle: :download
 
   # GET /customers
   # GET /customers.json
@@ -61,10 +62,25 @@ class CustomersController < ApplicationController
     end
   end
 
+  def download
+    respond_to do |format|
+    format.pdf do
+        pdf = CustomerPdf.new(@customers)
+        send_data pdf.render, filename: "Relatório de Clientes.pdf",
+                              type: "application/pdf",
+                              disposition: :inline
+      end
+    end
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_customer
       @customer = Customer.find(params[:id])
+    end
+
+    def set_customers
+      @customers = Customer.all.order(:id)
     end
 
     # Only allow a list of trusted parameters through.

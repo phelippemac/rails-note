@@ -27,6 +27,11 @@ gem 'font-awesome-rails'
 gem 'kaminari'
 # Centralization of locale data collection for Ruby on Rails.
 gem 'rails-i18n', '~> 6.0.0' # For 6.0.0 or higher
+# Prawn: Fast, Nimble PDF Generation For Ruby
+gem 'prawn', '~>2.2.0'
+gem 'prawn-table'
+gem 'prawn-rails'
+
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
 # Use Active Model has_secure_password
@@ -41,6 +46,7 @@ group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   gem 'faker', :git => 'https://github.com/faker-ruby/faker.git', :branch => 'master'
+  gem 'rspec-rails', '~> 4.0.1'
 end
 
 group :development do

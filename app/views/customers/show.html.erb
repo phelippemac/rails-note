@@ -1,19 +1,25 @@
 <p id="notice"><%= notice %></p>
+<div class="card col-lg-6 col-sm-12 font-change">
+    <div class="card-header">
+        <h1><strong>Nome: </strong><%= @customer.name %> - <strong>Email: </strong> <%= @customer.email %> - <strong>Telefone: </strong><%= @customer.phone %></h1>
+    </div>
+    <div class="card-body">
+        <h2>Contatos deste Cliente:</h2>
 
-<p>
-  <strong>Name:</strong>
-  <%= @customer.name %>
-</p>
-
-<p>
-  <strong>Email:</strong>
-  <%= @customer.email %>
-</p>
-
-<p>
-  <strong>Phone:</strong>
-  <%= @customer.phone %>
-</p>
-
-<%= link_to 'Edit', edit_customer_path(@customer) %> |
-<%= link_to 'Back', customers_path %>
+        <% @customer.contacts.each do |contact| %>
+        <hr>
+        <ul class="list-group">
+          <%= link_to  contact do %>
+            <li class="list-group-item">Nome: <%= contact.name %></li>
+          <% end %>
+            <li class="list-group-item">E-mail: <%= contact.email %></li>
+            <li class="list-group-item">Telefone: <%= contact.phone %></li>
+        </ul>
+        <hr>
+        <% end %>
+    </div>
+    <div class="card-footer">
+        <%= link_to 'Editar', edit_customer_path(@customer), class: 'btn btn-warning btn-lg' %>
+        <%= link_to 'Voltar', customers_path, class: 'btn btn-secondary btn-lg' %>
+    </div>
+</div>
