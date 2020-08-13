@@ -61,6 +61,13 @@ Rode então o seguinte comando no terminal:
 ```bash
 $ rails db:create db:migrate
 ```
+
+Para criar um admin inicial de E-mail: 'admin@admin' e Senha: 'admin123' para poder acessar áreas restritas da aplicação, rode no terminal:
+
+```bash
+$ rails populate:admin
+```
+
 Posterior a isso, está quase pronto, basta rodar:
 
 ```bash
