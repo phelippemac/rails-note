@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   root 'home#index'
   get 'home/index'
   post 'customers/download'
+  post 'contacts/download'
 
   resources :contacts
   resources :customers

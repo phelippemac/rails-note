@@ -1,0 +1,19 @@
+'pt-BR':
+  activerecord:
+    attributes:
+      customer:
+        email: E-Mail
+        name: Nome
+        phone: Telefone
+      contact:
+        email: E-Mail
+        name: Nome
+        phone: Telefone
+        customer: Cliente
+    models:
+      customer:
+        one: Cliente
+        other: Clientes
+      contact:
+        one: Contato
+        other: Contatos

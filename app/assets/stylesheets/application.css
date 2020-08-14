@@ -101,3 +101,17 @@ body {
   }
 
 }
+
+.alert {
+  font-size: 2rem !important;
+}
+
+.login-container{
+  margin: 0 auto;
+  padding: 1rem;
+  font-size: 1.2rem;
+  flex: 0;
+  align-items: center;
+  justify-content: center;
+  max-width: 500px;
+}

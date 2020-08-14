@@ -1,5 +1,6 @@
 class ContactsController < ApplicationController
   before_action :set_contact, only: [:show, :edit, :update, :destroy]
+  before_action :set_contacts, only: :download
   before_action :authenticate_admin!
 
   # GET /contacts
@@ -29,7 +30,7 @@ class ContactsController < ApplicationController
 
     respond_to do |format|
       if @contact.save
-        format.html { redirect_to @contact, notice: 'Contact was successfully created.' }
+        format.html { redirect_to @contact, flash: { success: 'Contact was successfully created.'} }
         format.json { render :show, status: :created, location: @contact }
       else
         format.html { render :new }
@@ -43,7 +44,7 @@ class ContactsController < ApplicationController
   def update
     respond_to do |format|
       if @contact.update(contact_params)
-        format.html { redirect_to @contact, notice: 'Contact was successfully updated.' }
+        format.html { redirect_to @contact, flash: { success: 'Contact was successfully updated.'} }
         format.json { render :show, status: :ok, location: @contact }
       else
         format.html { render :edit }
@@ -57,8 +58,19 @@ class ContactsController < ApplicationController
   def destroy
     @contact.destroy
     respond_to do |format|
-      format.html { redirect_to contacts_url, notice: 'Contact was successfully destroyed.' }
+      format.html { redirect_to contacts_url, flash: { success: 'Contact was successfully destroyed.'} }
       format.json { head :no_content }
+    end
+  end
+
+  def download
+    respond_to do |format|
+    format.pdf do
+        pdf = ContactPdf.new(@contacts)
+        send_data pdf.render, filename: "Relatório de Contatos.pdf",
+                              type: "application/pdf",
+                              disposition: :inline
+      end
     end
   end
 
@@ -66,6 +78,10 @@ class ContactsController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_contact
       @contact = Contact.find(params[:id])
+    end
+
+    def set_contacts
+      @contacts = Contact.order(:customer_id)
     end
 
     # Only allow a list of trusted parameters through.
