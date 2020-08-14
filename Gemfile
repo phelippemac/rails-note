@@ -29,8 +29,8 @@ gem 'kaminari'
 gem 'rails-i18n', '~> 6.0.0' # For 6.0.0 or higher
 # Prawn: Fast, Nimble PDF Generation For Ruby
 gem 'prawn', '~>2.2.0'
-gem 'prawn-table'
 gem 'prawn-rails'
+gem 'prawn-table'
 
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'

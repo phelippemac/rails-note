@@ -28,6 +28,7 @@
 }
 
 *{
+    max-width: 98vw;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -74,6 +75,10 @@ body {
 }
 
 @media (min-width: 700px){
+
+  *{
+    max-width: 99vw;
+  }
   .page-header{
     display: inline-block;
     flex-direction: row;
