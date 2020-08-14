@@ -8,12 +8,13 @@
 
 ## Galeria
 
-Ainda Vazia 😒 # O projeto encontra-se em fase de contrução das Views
+<img src="https://ik.imagekit.io/795unnjv9m/tela_cheia_ygkVbSxVcR.gif" height="450">
+<img src="https://ik.imagekit.io/795unnjv9m/tela_mobile_5eDpynqmA.gif" height="400">
 
 ## Sobre
 
 É um projeto realizado como um prova prática de conhecimentos a nível junior de desenvolvimento WEB.
-Temo o intuito de gravar dados de Clientes e seus Contatos, e ainda contar com um sistema de Login.
+Tem o intuito de gravar dados de Clientes e seus Contatos, e ainda contar com um sistema de Login.
 
 ## Prototipação do Banco de Dados
 
